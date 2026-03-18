@@ -10,6 +10,7 @@ React + Supabase 待辦清單專案
 - 清除所有已完成
 
 ---
+[Todos-app](https://jen041794.github.io/orginal_todos/)
 
 ## 設定步驟
 
@@ -87,3 +88,7 @@ src/
 | tag | text | 標籤（可空） |
 | is_done | boolean | 是否完成 |
 | created_at | timestamptz | 建立時間 |
+
+---
+
+![todos 網頁demo](/path/to/img.jpg)
