@@ -1,0 +1,69 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #F5F0E8;
+  --paper: #FDFAF4;
+  --ink: #1A1714;
+  --ink-soft: #6B6560;
+  --ink-faint: #C8C2B8;
+  --accent: #C8441A;
+  --accent-soft: #F0E4DC;
+  --done: #5A8A5E;
+  --done-soft: #E2EDE3;
+  --border: #DDD8CF;
+  --shadow: rgba(26,23,20,0.06);
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'DM Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: scaleY(1); max-height: 80px; }
+  to   { opacity: 0; transform: scaleY(0.8); max-height: 0; }
+}
+
+.todo-item {
+  animation: slideIn 0.2s ease;
+}
+
+.todo-item.removing {
+  animation: fadeOut 0.25s ease forwards;
+  overflow: hidden;
+}
