@@ -92,4 +92,10 @@ src/
 
 ---
 
-![todos 網頁demo](https://github.com/user-attachments/assets/7116cbbb-a4e8-4e59-a4a8-27bb80c2a72c)
+### 網頁demo顯示
+![todos 網頁demo](https://github.com/user-attachments/assets/fabaabeb-e581-4af5-9bd5-e0ae672e2a27)
+
+---
+
+### 連結資料庫後的顯示(含測試)
+![todos 資料庫連結](https://github.com/user-attachments/assets/7116cbbb-a4e8-4e59-a4a8-27bb80c2a72c)
