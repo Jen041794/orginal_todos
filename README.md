@@ -2,12 +2,18 @@
 
 React + Supabase 待辦清單專案
 
-## 功能
-- 新增、完成、刪除待辦事項
-- 標籤分類（工作 / 個人 / 其他）
-- 篩選（全部 / 進行中 / 已完成）
-- 進度條
-- 清除所有已完成
+## 專案簡介
+
+以 React 搭配 Supabase 雲端資料庫打造的全端待辦清單應用，資料即時儲存於雲端，重新整理後不會消失。
+
+## 功能介紹
+
+- 新增待辦事項，支援工作 / 個人 / 其他三種標籤分類
+- 點擊圓圈切換完成狀態，附完成進度條
+- 滑鼠移過顯示刪除按鈕
+- 篩選全部 / 進行中 / 已完成
+- 一鍵清除所有已完成項目
+- 資料即時同步 Supabase 雲端資料庫
 
 ---
 [Todos-app](https://jen041794.github.io/orginal_todos/)
@@ -64,6 +70,17 @@ npm run dev
 
 ---
 
+## 技術架構
+
+| 類別 | 技術 |
+|------|------|
+| 前端框架 | React 18 |
+| 建構工具 | Vite |
+| 資料庫 | Supabase (PostgreSQL) |
+| 部署 | GitHub Pages + GitHub Actions |
+
+---
+
 ## 專案結構
 
 ```
@@ -89,6 +106,17 @@ src/
 | is_done | boolean | 是否完成 |
 | created_at | timestamptz | 建立時間 |
 
+---
+
+## 製作過程與學習心得
+
+這是我第一個串接雲端資料庫的前端專案，主要學習目標是理解前端如何與後端資料庫溝通。
+
+過程中碰到幾個印象深刻的問題：
+
+- **環境變數管理**：了解 `.env` 不能上傳 GitHub，改用 GitHub Secrets 在 CI/CD 流程中注入金鑰
+- **資料庫權限設定**：學習 Supabase 的 Row Level Security (RLS) 政策設定
+- **自動化部署**：第一次設定 GitHub Actions workflow，實現 push 後自動 build 並部署到 GitHub Pages
 
 ---
 
